@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="青享沪上来沪青年公共服务结构化导办研究原型">
+  <meta name="description" content="青享沪上：面向来沪青年的公共服务导办研究原型">
   <title>青享沪上 | 公共服务导办研究原型</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23176b50'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial' font-size='18' font-weight='700' fill='white'%3EQ%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="assets/brand-mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="app-shell">
     <aside class="sidebar" aria-label="主导航">
       <div class="brand">
-        <span class="brand-mark" aria-hidden="true">Q</span>
-        <div><strong>青享沪上</strong><span>研究原型 v0.2</span></div>
+        <span class="brand-mark" aria-hidden="true"><img src="assets/brand-mark.svg" alt=""></span>
+        <div><strong>青享沪上</strong><span>研究原型 v0.3</span></div>
       </div>
       <nav>
         <button class="nav-item active" data-target="guide">导办工作台</button>
@@ -22,19 +22,19 @@
         <button class="nav-item" data-target="about">研究说明</button>
       </nav>
       <div class="sidebar-note">
-        <strong>信息边界</strong>
-        <p>不保存输入，不要求证件信息，不替代官方认定。</p>
+        <strong>使用提示</strong>
+        <p>输入内容不会保存，无须提供证件信息。最终办理结果以官方审核为准。</p>
       </div>
     </aside>
 
     <main class="workspace">
       <header class="topbar">
         <div>
-          <p class="eyebrow">来沪青年安居与初始城市融入</p>
+          <p class="eyebrow">来沪青年安居与城市融入</p>
           <h1>公共服务导办工作台</h1>
         </div>
         <div class="topbar-actions">
-          <span class="verified">知识核验至 2026-08-27</span>
+          <span class="verified">信息核验日期：2026-08-27</span>
           <button id="resetButton" class="secondary-button">重新开始</button>
         </div>
       </header>
@@ -44,8 +44,8 @@
           <img src="assets/service-lobby.png" alt="两名青年在公共服务场所查看办事指引">
           <div class="banner-copy">
             <span>结构化导办</span>
-            <h2 id="guide-title">先说目标，再确认必要情形</h2>
-            <p>我会把条件、材料、顺序和官方入口整理成可核验的准备清单。</p>
+            <h2 id="guide-title">告诉我您想办什么</h2>
+            <p>我会逐步确认相关情况，并整理办理条件、所需材料、办理顺序和官方入口。</p>
           </div>
         </div>
 
@@ -59,45 +59,45 @@
             </div>
             <div id="messages" class="messages" aria-live="polite"></div>
             <form id="queryForm" class="query-box">
-              <label for="queryInput">描述您想完成的事</label>
+              <label for="queryInput">您想办理什么？</label>
               <div>
-                <input id="queryInput" autocomplete="off" placeholder="例如：我住学校宿舍，居住登记要准备什么？" maxlength="160">
+                <input id="queryInput" autocomplete="off" placeholder="例如：学校宿舍如何办理居住登记？" maxlength="160">
                 <button type="submit" class="primary-button">开始导办</button>
               </div>
-              <p>请勿输入姓名、身份证号、精确住址或账号信息。</p>
+              <p>请勿输入姓名、身份证号、详细住址或政务账号等个人信息。</p>
             </form>
           </section>
 
           <aside class="plan-panel" aria-label="当前办事准备清单">
             <div class="panel-heading">
-              <div><span>当前结果</span><h2 id="planTitle">等待选择事项</h2></div>
-              <span id="riskBadge" class="risk-badge neutral">未判断</span>
+              <div><span>办理建议</span><h2 id="planTitle">请选择办理事项</h2></div>
+              <span id="riskBadge" class="risk-badge neutral">等待开始</span>
             </div>
             <div id="planContent" class="plan-content empty-state">
-              <p>选择常见事项或输入目标后，这里会生成结构化计划。</p>
+              <p>选择常见事项或描述您的需求后，这里会显示办理建议和准备清单。</p>
             </div>
             <div class="plan-actions">
               <button id="printButton" class="secondary-button" disabled>打印清单</button>
-              <button id="feedbackButton" class="text-button" disabled>记录问题</button>
+              <button id="feedbackButton" class="text-button" disabled>反馈问题</button>
             </div>
           </aside>
         </div>
       </section>
 
       <section id="journey" class="view" aria-labelledby="journey-title">
-        <div class="section-head"><p class="eyebrow">主研究链路</p><h2 id="journey-title">安居与初始城市融入服务旅程</h2></div>
+        <div class="section-head"><p class="eyebrow">主要服务流程</p><h2 id="journey-title">安居与城市融入服务旅程</h2></div>
         <ol class="journey-list">
-          <li><span>01</span><div><strong>找到安居选项</strong><p>青年驿站、保租房、人才公寓等动态服务，以实时平台为准。</p></div></li>
-          <li><span>02</span><div><strong>确认住房与合同情形</strong><p>自有、亲属住房、市场租赁和集体宿舍对应不同证明。</p></div></li>
-          <li><span>03</span><div><strong>按需办理租赁网签备案</strong><p>它与居住登记是独立事项；自行成交、经纪机构和租赁企业对应不同办理主体。</p></div></li>
-          <li><span>04</span><div><strong>居住登记</strong><p>租赁情形可按现行细则提交住房租赁合同或备案证明；登记凭证有效期一年。</p></div></li>
-          <li><span>05</span><div><strong>申领居住证</strong><p>核验登记满半年或连续社保视同情形，并满足就业、住所或连续就读之一。</p></div></li>
-          <li><span>06</span><div><strong>衔接就业与其他服务</strong><p>根据真实调研决定下一批纳入事项。</p></div></li>
+          <li><span>01</span><div><strong>查找合适的安居服务</strong><p>青年驿站、保租房和人才公寓等服务会动态调整，请以官方平台的实时信息为准。</p></div></li>
+          <li><span>02</span><div><strong>确认住房和合同情况</strong><p>自有住房、近亲属住房、市场租赁住房和集体宿舍所需的证明各不相同。</p></div></li>
+          <li><span>03</span><div><strong>按需办理租赁网签备案</strong><p>网签备案与居住登记是两项独立业务；自行签约、通过经纪机构签约或由租赁企业出租，办理主体各不相同。</p></div></li>
+          <li><span>04</span><div><strong>办理居住登记</strong><p>租赁住房可按现行细则提交住房租赁合同或备案证明；登记凭证有效期为一年。</p></div></li>
+          <li><span>05</span><div><strong>申领居住证</strong><p>确认是否满足登记时间或连续缴纳社保的相关规定，以及就业、住所或连续就读条件之一。</p></div></li>
+          <li><span>06</span><div><strong>衔接其他城市服务</strong><p>根据实际需要，继续了解就业、社保等相关公共服务。</p></div></li>
         </ol>
       </section>
 
       <section id="sources" class="view" aria-labelledby="source-title">
-        <div class="section-head"><p class="eyebrow">只使用可核验事实</p><h2 id="source-title">官方来源</h2></div>
+        <div class="section-head"><p class="eyebrow">信息均可追溯</p><h2 id="source-title">官方来源</h2></div>
         <div id="sourceList" class="source-list"></div>
       </section>
 
@@ -106,15 +106,15 @@
         <div class="about-layout">
           <div>
             <h3>原型目的</h3>
-            <p>用于比较来沪青年使用常规检索与结构化导办时的任务效率、正确性和信任体验，并根据真实测试迭代。</p>
+            <p>用于比较来沪青年使用常规检索和结构化导办时的任务效率、答案准确性与信任体验，并根据用户测试结果持续改进。</p>
           </div>
           <div>
-            <h3>不是政府服务</h3>
-            <p>本工具不受理申请、不判断最终资格、不保存真实个人资料。所有办理结论以官方页面、热线和受理机构为准。</p>
+            <h3>服务边界</h3>
+            <p>本工具不受理申请、不判断最终资格，也不保存个人资料。具体办理要求和结果以官方页面、咨询热线及受理机构为准。</p>
           </div>
           <div>
             <h3>如何反馈</h3>
-            <p>测试人员可记录入口失效、信息过期、表达难懂或流程遗漏。正式研究将以匿名编号整理反馈。</p>
+            <p>测试人员可以反馈入口失效、信息过期、表述难懂或流程遗漏等问题。研究记录将统一采用匿名编号。</p>
           </div>
         </div>
       </section>
@@ -123,11 +123,11 @@
 
   <dialog id="feedbackDialog">
     <form method="dialog">
-      <div class="dialog-head"><h2>记录测试问题</h2><button value="cancel" aria-label="关闭">关闭</button></div>
-      <label for="feedbackText">观察到的问题</label>
+      <div class="dialog-head"><h2>反馈测试问题</h2><button value="cancel" aria-label="关闭" title="关闭">×</button></div>
+      <label for="feedbackText">您发现了什么问题？</label>
       <textarea id="feedbackText" rows="5" placeholder="例如：材料清单里不理解“合法居住证明”的含义"></textarea>
-      <p>此原型不会上传或保存内容。请由测试记录员复制到匿名测试表。</p>
-      <button value="confirm" class="primary-button">完成记录</button>
+      <p>这里的内容不会上传或保存。请将反馈另行记录到匿名测试表中。</p>
+      <button value="confirm" class="primary-button">完成</button>
     </form>
   </dialog>
 

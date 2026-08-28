@@ -11,9 +11,9 @@ window.QINGXIANG_KNOWLEDGE = {
     },
     {
       id: "SRC-RES-SERVICE",
-      title: "一网通办：居住登记申请",
+      title: "居住登记申请",
       issuer: "上海市人民政府一网通办",
-      published: "动态事项页",
+      published: "页面动态更新",
       verified: "2026-08-27",
       url: "https://www.shanghai.gov.cn/affairs_affairs/2cc04d121d4d4e6e809f6d0bcf5f661c.html",
       scope: "条件、材料、办理方式、地点和咨询"
@@ -34,7 +34,7 @@ window.QINGXIANG_KNOWLEDGE = {
       published: "2026-04-17",
       verified: "2026-08-27",
       url: "https://rsj.sh.gov.cn/tgwyrsb_17088/20260417/t0035_1440076.html",
-      scope: "青年驿站扩容和就业服务背景；不作为个人资格认定"
+      scope: "青年驿站扩容和就业服务背景；不能用于判断个人申请资格"
     },
     {
       id: "SRC-YOUTH-HOUSING",
