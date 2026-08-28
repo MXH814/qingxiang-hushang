@@ -5,10 +5,14 @@ PROJECT.md
 10_知行杯材料/
 11_团队真人实践执行包/
 11_团队真人实践执行包_*.zip
+11_实践包/
 
 # Restricted or future participant data
 04_原始数据_受限/
 08_现场影像_原始/
+06_数据分析/prepare_real_data.py
+06_数据分析/analyze_real_research.py
+06_数据分析/outputs/真实调研_20260828/
 
 # Generated deliverables and archives
 99_归档/

@@ -2,8 +2,8 @@ const fs = require("node:fs");
 const path = require("node:path");
 const engine = require("./prototype/engine.js");
 
-const inputPath = process.argv[2] || "评测集_v1.csv";
-const outputDir = process.argv[3] || "评测结果_自动回归";
+const inputPath = process.argv[2] || path.join(__dirname, "评测集_v1.csv");
+const outputDir = process.argv[3] || path.join(__dirname, "评测结果_自动回归");
 const categoryIntent = {
   "居住登记": "residence_registration",
   "居住证": "residence_permit",
@@ -101,7 +101,7 @@ fs.writeFileSync(path.join(outputDir, "case_results.csv"), "\ufeff" + csv, "utf8
 
 const summary = {
   run_at: new Date().toISOString(),
-  engine_version: "0.2",
+  engine_version: "0.4",
   total: results.length,
   routed: results.filter((item) => item.routed).length,
   sources_valid: results.filter((item) => item.sources_valid).length,

@@ -13,7 +13,7 @@
     <aside class="sidebar" aria-label="主导航">
       <div class="brand">
         <span class="brand-mark" aria-hidden="true"><img src="assets/brand-mark.svg" alt=""></span>
-        <div><strong>青享沪上</strong><span>研究原型 v0.3</span></div>
+        <div><strong>青享沪上</strong><span>研究原型 v0.4</span></div>
       </div>
       <nav>
         <button class="nav-item active" data-target="guide">导办工作台</button>
@@ -34,7 +34,7 @@
           <h1>公共服务导办工作台</h1>
         </div>
         <div class="topbar-actions">
-          <span class="verified">信息核验日期：2026-08-27</span>
+          <span class="verified">信息核验日期：2026-08-29</span>
           <button id="resetButton" class="secondary-button">重新开始</button>
         </div>
       </header>
@@ -56,7 +56,10 @@
               <button data-query="我想申领上海市居住证">居住证</button>
               <button data-query="租赁合同怎么网签备案">租赁备案</button>
               <button data-query="我想了解青年驿站或保租房">青年安居</button>
+              <button data-query="我住学校宿舍，想办理居住登记">学生宿舍</button>
+              <button data-query="我还没来上海，想提前申请青年驿站">尚未来沪</button>
             </div>
+            <div class="term-note"><strong>先辨别事项</strong><span>居住登记完成后取得登记凭证，不等于居住证；租赁网签备案也是独立业务。</span></div>
             <div id="messages" class="messages" aria-live="polite"></div>
             <form id="queryForm" class="query-box">
               <label for="queryInput">您想办理什么？</label>
@@ -78,6 +81,7 @@
             </div>
             <div class="plan-actions">
               <button id="printButton" class="secondary-button" disabled>打印清单</button>
+              <button id="humanButton" class="secondary-button" disabled>人工渠道</button>
               <button id="feedbackButton" class="text-button" disabled>反馈问题</button>
             </div>
           </aside>
@@ -86,6 +90,13 @@
 
       <section id="journey" class="view" aria-labelledby="journey-title">
         <div class="section-head"><p class="eyebrow">主要服务流程</p><h2 id="journey-title">安居与城市融入服务旅程</h2></div>
+        <div class="relationship-map" aria-label="租赁备案、居住登记和居住证之间的关系">
+          <div><span>独立事项</span><strong>租赁合同网签备案</strong><p>完成后取得备案通知书；是否办理取决于交易方式和实际用途。</p></div>
+          <b aria-hidden="true">→</b>
+          <div><span>独立事项</span><strong>居住登记</strong><p>租赁住房可按现行规则提交租赁合同或备案证明。</p></div>
+          <b aria-hidden="true">→</b>
+          <div><span>另行申领</span><strong>上海市居住证</strong><p>登记时间或连续社保只是条件之一，仍需官方审核。</p></div>
+        </div>
         <ol class="journey-list">
           <li><span>01</span><div><strong>查找合适的安居服务</strong><p>青年驿站、保租房和人才公寓等服务会动态调整，请以官方平台的实时信息为准。</p></div></li>
           <li><span>02</span><div><strong>确认住房和合同情况</strong><p>自有住房、近亲属住房、市场租赁住房和集体宿舍所需的证明各不相同。</p></div></li>
