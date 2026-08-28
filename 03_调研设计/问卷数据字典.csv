@@ -1,0 +1,42 @@
+variable,label,type,allowed_values,missing_rule,analysis_role
+response_id,匿名答卷编号,string,unique required,不得为空,主键
+submitted_at,提交时间,datetime,ISO or platform datetime,可为空,质量检查
+duration_sec,答题时长（秒）,integer,positive,可为空但需报告,质量检查
+recruit_channel,招募渠道,category,campus;intern_group;alumni;other,可为空,抽样偏差描述
+S0,知情同意,binary,0;1,不得为空且仅保留1,筛选
+S1,年龄段,category,1;2;3;4;5,不得为空,样本描述
+S2,来沪阶段,category,1;2;3;4;5;6,不得为空,核心分组
+S3,是否来沪青年,category,1;2;3,不得为空,核心筛选
+S4,来沪时长,category,1;2;3;4;5;6,不得为空,核心分组
+S5,居住方式,category,1;2;3;4;5;6;7;8,不得为空,核心分组
+aware_youth_station,青年驿站认知/使用,ordinal,0;1;2;3;4,不得为空,服务认知
+aware_baozu,保租房/人才公寓认知/使用,ordinal,0;1;2;3;4,不得为空,服务认知
+aware_rent_filing,租赁网签备案认知/使用,ordinal,0;1;2;3;4,不得为空,服务认知
+aware_registration,居住登记认知/使用,ordinal,0;1;2;3;4,不得为空,服务认知
+aware_permit,居住证认知/使用,ordinal,0;1;2;3;4,不得为空,服务认知
+aware_employment,就业/人才服务认知/使用,ordinal,0;1;2;3;4,不得为空,服务认知
+aware_social_security,社保/医保认知/使用,ordinal,0;1;2;3;4,不得为空,服务认知
+Q2,最希望获得指导的事项,category,1;2;3;4;5;6;7;8;9,不得为空,需求优先级
+Q3,过去两年是否真实查询/办理,binary,0;1,不得为空,跳题
+Q4,最近一次事项,category,1;2;3;4;5;6;7;9,Q3=0时应为空,经历分组
+Q5,使用渠道,multiselect,分号分隔1-10,Q3=0时为空,渠道分析
+Q6a,不知道官方事项名,likert,1;2;3;4;5;NA,Q3=0时为空,可发现性
+Q6b,难辨权威最新入口,likert,1;2;3;4;5;NA,Q3=0时为空,可发现/信任
+Q6c,难理解条件术语,likert,1;2;3;4;5;NA,Q3=0时为空,可理解性
+Q6d,难判断身份适用,likert,1;2;3;4;5;NA,Q3=0时为空,身份适配
+Q6e,难理解材料,likert,1;2;3;4;5;NA,Q3=0时为空,可执行性
+Q6f,不清楚先后流程,likert,1;2;3;4;5;NA,Q3=0时为空,可执行性
+Q6g,多渠道难衔接,likert,1;2;3;4;5;NA,Q3=0时为空,渠道衔接
+Q6h,不知道咨询补救,likert,1;2;3;4;5;NA,Q3=0时为空,纠错兜底
+Q7,最近经历结果,category,1;2;3;4;5;6,Q3=0时为空,结果指标
+Q8,额外成本,multiselect,分号分隔1-8,Q3=0时为空,结果指标
+Q9,总体易用性,likert,1;2;3;4;5,Q3=0时为空,主观结果
+Q10,未来担忧,multiselect,分号分隔选项文本或编码,最多3项,需求分析
+Q11,希望AI帮助,multiselect,分号分隔选项文本或编码,最多4项,产品需求
+Q12,AI信任条件,multiselect,分号分隔选项文本或编码,最多3项,信任设计
+Q13,AI担忧,multiselect,分号分隔选项文本或编码,最多3项,风险设计
+Q14,AI试用意愿,likert,1;2;3;4;5,不得为空,接受度
+Q15,愿意后续访谈/测试,binary,0;1,不得为空,招募意愿
+Q16,开放建议,text,free text,可为空,质性补充
+difficulty_mean,八项困难平均分,derived,1-5,至少4个Q6有效时计算,派生指标
+quality_flags,质量标记,derived,semicolon separated,不得作为自动删除的唯一依据,质检
